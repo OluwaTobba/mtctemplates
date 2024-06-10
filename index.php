@@ -8,11 +8,11 @@
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>MTC Templates</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/animsition.min.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
 </head>
 <body class="home">
     <header id="header" class="header-scroll top-header headrom">
@@ -30,10 +30,11 @@
                         <li class="nav-item"> <a class="nav-link active" href="about.php">ABOUT <span class="sr-only"></span></a> </li>
                         <li class="nav-item"> <a class="nav-link active" href="templates/template-list.php">TEMPLATES <span class="sr-only"></span></a> </li>
                         <li class="nav-item"> <a class="nav-link active" href="contact.php">CONTACT <span class="sr-only"></span></a> </li>
-                        <li class="nav-item"> <a class="nav-link active" href="admin/login.php">ADMIN <span class="sr-only"></span></a> </li>
+                        <li class="nav-item"> <a class="nav-link active" href="admin/login.php" target="_blank">ADMIN <span class="sr-only"></span></a> </li>
                     </ul>
 
                 </div>
+
             </div>
         </nav>
 
