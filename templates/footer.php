@@ -2,11 +2,11 @@
     .footer {
         text-align: center;
         padding: 10px;
-        background-color: #343a40;
+        background-color: #5e3bcd;
         color: white;
-        position: fixed;
+        /* position: fixed; */
         bottom: 0;
-        width: 100%;
+        /* width: 100%; */
     }
 </style>
 

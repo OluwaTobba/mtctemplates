@@ -26,7 +26,7 @@
 <body>
 
 <header>
-    <h1>Admin Dashboard</h1>
+    <h1>ADMIN DASHBOARD</h1>
     <nav>
         <a href="dashboard.php">Dashboard</a>
         <a href="manage_templates.php">Manage Templates</a>

@@ -186,11 +186,11 @@
 </style>
 
 <header>
-    <h1>Admin Dashboard</h1>
+    <h1>ADMIN DASHBOARD</h1>
     <nav>
         <a href="dashboard.php">Dashboard</a>
         <a href="manage_templates.php">Manage Templates</a>
-        <a href="../index.php">Go to Website</a>
+        <a href="../index.php" target="_blank">Go to Website</a>
         <!-- <a href="manage_users.php">Manage Users</a> -->
         <a href="logout.php">Logout</a>
     </nav>

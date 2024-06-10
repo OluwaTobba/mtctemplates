@@ -134,11 +134,11 @@
 </style>
 
 <header>
-    <h1>Admin Dashboard</h1>
+    <h1>ADMIN DASHBOARD</h1>
     <nav>
         <a href="dashboard.php">Dashboard</a>
         <a href="manage_templates.php">Manage Templates</a>
-        <a href="../index.php">Go to Website</a>
+        <a href="../index.php" target="_blank">Go to Website</a>
         <!-- <a href="manage_users.php">Manage Users</a> -->
         <a href="logout.php">Logout</a>
     </nav>
@@ -182,10 +182,10 @@
                 </td>
                 <td>
                     <a class="btn btn-1" href="edit_template.php?id=<?= $template['id'] ?>">Edit</a>
-                    <!-- <a class="btn" href="delete_template.php?id=<?= $template['id'] ?>" onclick="return confirm('Are You Sure You Want to Delete This Template?')">Delete</a> -->
+                    <!-- <a class="btn" href="delete_template.php?id=<?= $template['id'] ?>" onclick="return confirm('Are You Sure You Want To Delete This Template?')">Delete</a> -->
                     <form method="post" style="display:inline;">
                         <input type="hidden" name="template_id" value="<?= $template['id'] ?>">
-                        <button type="submit" name="delete_template" class="btn-2" onclick="return confirm('Are You Sure You Want to Delete This Template?')">Delete</button>
+                        <button type="submit" name="delete_template" class="btn-2" onclick="return confirm('Are You Sure You Want To Delete This Template?')">Delete</button>
                     </form>
                 </td>
             </tr>
