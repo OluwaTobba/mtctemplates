@@ -1,6 +1,6 @@
 <?php
     $host = "localhost";
-    $db = "mtctemplate_marketplace";
+    $db = "mtctemplate_db";
     $user = "root";
     $pass = "";
     $charset = "utf8mb4";

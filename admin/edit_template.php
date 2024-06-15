@@ -70,6 +70,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Current Template | Admin Dashboard - MTC Templates</title>
+    <link rel="icon" href="../assets/img/admin.png">
 </head>
 
 <style>

@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM admins WHERE username = :username";
+    $query = "SELECT * FROM admin WHERE username = :username";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['username' => $username]);
     $admin = $stmt->fetch(PDO::FETCH_ASSOC);

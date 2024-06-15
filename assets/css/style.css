@@ -103,7 +103,7 @@ hr {
 }
 
 /*==================================
-* Just simple warppers
+* Just simple wrappers
 *===================================*/
 
 .page-wrapper {
@@ -114,65 +114,6 @@ hr {
 .inner-page {
   margin-top: 30px;
   margin-bottom: 50px;
-}
-
-/*==================================
-* Foms
-*===================================*/
-
-.custom-control-input:checked ~ .custom-control-indicator {
-  color: #fff;
-  background-color: #5c4ac7;
-  margin-top: 0;
-  padding: 10px;
-  border-radius: 100%;
-}
-
-.custom-checkbox .custom-control-indicator {
-  border-radius: 100%;
-}
-
-.custom-control-indicator {
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 1px 3px rgba(93, 92, 99, 0.05);
-  border: 1px solid rgba(116, 135, 150, 0.23);
-}
-
-.custom-control-input:focus ~ .custom-control-indicator {
-  -webkit-box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #5c4ac7;
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #5c4ac7;
-}
-
-.custom-radio .custom-control-input:checked ~ .custom-control-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0088"%3E%3Cpath fill="%23fff" d="M6.564.75l-3.593.612-1.538-1.55l04.262.9747.2582.193z"/%3E%3C/svg%3E");
-}
-
-.custom-control-input:active ~ .custom-control-indicator {
-  color: #fff;
-  background-color: #5c4ac7;
-}
-
-.custom-control-input:disabled ~ .custom-control-indicator {
-  cursor: not-allowed;
-  background-color: #eee;
-}
-
-.custom-control-input:disabled ~ .custom-control-description {
-  color: #76767;
-}
-
-.custom-control {
-  padding-left: 30px;
-}
-
-.form-control {
-  border: 1px solid #eaebeb;
-  border-radius: 2px;
-}
-
-.custom-select {
-  line-height: 1;
 }
 
 /* ==========================
@@ -374,13 +315,13 @@ hr {
 }
 
 .navbar {
-  background-image: url("../images/menu-bg.jpg");
+  background-image: url("../img/menu-bg.jpg");
   padding: 0.95rem 1rem;
   border-radius: 0;
 }
 
 .navbar-nav .nav-item {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .navbar-dark .navbar-toggler {
@@ -388,33 +329,57 @@ hr {
   border-color: transparent;
 }
 
+/* Mobile view */
 @media (max-width: 62em) {
-  .navbar-nav {
-    padding-top: 0.425rem;
-    padding-left: 0.75rem;
+  .navbar {
+      padding: 0.5rem 1rem;
   }
-  .navbar-nav .nav-item {
-    float: none;
+
+  .navbar-toggler {
+      float: right;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
   }
+
   .navbar-brand {
-    float: right;
+      float: left;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
   }
-  .navbar-brand,
+
+  .navbar-collapse {
+      text-align: center;
+  }
+
+  .navbar-nav {
+      padding-top: 0.5rem;
+  }
+
   .navbar-nav .nav-item {
-    display: block;
+      display: block;
+      margin: 0.5rem 0;
   }
-  .navbar-nav .nav-item + .nav-item {
-    margin-left: 0;
+
+  .navbar-nav .nav-item .nav-link {
+      color: #007bff;
+      font-size: 1.25rem;
+      text-decoration: none;
   }
-  .dropdown-menu {
-    position: relative;
-    float: none;
-    background-color: transparent;
+
+  .navbar-nav .nav-item .nav-link:hover {
+      color: #0056b3;
   }
-  .dropdown-menu a {
-    color: #fff;
+
+  .navbar-nav .nav-item .nav-link.active {
+      color: #0056b3;
+      font-weight: bold;
   }
 }
+
 
 .headroom--pinned {
   display: block;
@@ -570,13 +535,13 @@ hr {
   top: -20%;
   width: 130px;
   height: 32px;
-  background: url(../images/arrow.png);
+  background: url(../img/arrow.png);
 }
 
 .step2:after {
-  background: url(../images/arrow-dotted.png);
+  background: url(../img/arrow-dotted.png);
   height: 25px;
-  right: -95%;
+  right: -35%;
   top: -15%;
 }
 
@@ -629,10 +594,15 @@ hr {
 
 .food-item-wrap {
   border: 1px solid #eaebeb;
-  border-radius: 2px;
+  border-radius: 5px;
   overflow: hidden;
   margin-bottom: 30px;
   background: #fafaf8;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.food-item-wrap:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .food-item-wrap h5 a {
@@ -647,6 +617,15 @@ hr {
   color: #414551;
   line-height: 21px;
   font-weight: 300;
+}
+
+.figure-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
 }
 
 .food-item-wrap .price {
@@ -755,7 +734,7 @@ hr {
   bottom: -1px;
   left: 0;
   content: "";
-  background: url(../images/zig-zag.png);
+  background: url(../img/zig-zag.png); 
   width: 100%;
   height: 5px;
 }
@@ -833,8 +812,21 @@ hr {
   float: left;
 }
 
+.view-more {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.view-more-btn a {
+  color: #5c4ac7;
+  text-decoration: none;
+}
+.view-more-btn a:hover {
+  color: #fff;
+}
+
 @media (max-width: 543px) {
-  ...;
+  
 }
 
 @media (min-width: 544px) and (max-width: 767px) {
@@ -895,7 +887,7 @@ hr {
 }
 
 @media (min-width: 1200px) {
-  ...;
+  
 }
 
 /*============================================
@@ -971,7 +963,7 @@ How it works section
 -----------------------------------*/
 
 .how-it-works {
-  background-image: url(../images/city.png), url(../images/pattern.png);
+  background-image: url(../img/city.png), url(../img/pattern.png);
   background-repeat: repeat-x, repeat;
   background-position: bottom, center;
   padding: 90px 0;
@@ -1067,7 +1059,7 @@ Steps
   top: 15%;
   width: 185px;
   height: 34px;
-  background: url(../images/arrow-big.png) no-repeat;
+  background: url(../img/arrow-big.png) no-repeat;
 }
 
 .col2:after {
@@ -1077,7 +1069,7 @@ Steps
   top: 11%;
   width: 175px;
   height: 34px;
-  background: url(../images/arrow-big-dotted.png) no-repeat;
+  background: url(../img/arrow-big-dotted.png) no-repeat;
 }
 
 .how-it-works-solution {
@@ -1113,8 +1105,89 @@ Steps
 }
 
 @media (min-width: 1200px) {
-  ...;
+  
 }
+
+
+/******** FAQ Section **********/
+
+.f-a-q {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.f-a-q h1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.f-a-q .topic {
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom: solid 1px #ebebeb;
+}
+
+.f-a-q .open {
+  cursor: pointer;
+  display: block;
+  padding: 0px;
+}
+
+.f-a-q .open:hover {
+  opacity: 0.7;
+}
+
+.f-a-q .expanded {
+  background-color: #f5f5f5;
+  transition: all .3s ease-in-out;
+  border-radius: 15px;
+}
+.f-a-q .question {
+  padding: 30px 40px 20px 0px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5c4ac7;
+}
+
+.f-a-q .answer {
+  font-size: 16px;
+  line-height: 26px;
+  display: none;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.f-a-q .faq-t {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: -55px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transition: all .3s ease-in-out;
+}
+
+.f-a-q .faq-o {
+  top: -50px;
+  -moz-transform: rotate(-224deg);
+  -ms-transform: rotate(-224deg);
+  -webkit-transform: rotate(-224deg);
+  transform: rotate(-224deg);
+}
+
 
 /****** featured restaurants block *******/
 
@@ -1291,7 +1364,7 @@ App section
 
 .app-section:after {
   content: "";
-  background: url(../images/city-2.png) center bottom;
+  background: url(../img/city-2.png) center bottom;
   background-color: #5c4ac7;
   display: block;
   position: absolute;
@@ -1408,7 +1481,7 @@ App section
 ============================*/
 
 footer {
-  background: url(../images/pattern.png) center repeat;
+  background: url(../img/pattern.png) center repeat;
   padding: 90px 0;
   z-index: 1;
   position: relative;

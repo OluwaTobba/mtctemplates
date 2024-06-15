@@ -9,7 +9,7 @@
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
     // Insert to Database
-    $stmt = $pdo->prepare('INSERT INTO admins (username, password) VALUES (?, ?)');
+    $stmt = $pdo->prepare('INSERT INTO admin (username, password) VALUES (?, ?)');
     $stmt->execute([$username, $hashed_password]);
 
     echo "Admin Created Successfully";
