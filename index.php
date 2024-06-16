@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <meta name="description" content="">
@@ -56,7 +56,7 @@
 
     </header>
 
-    <section class="hero bg-image" data-image-src="assets/img/pink-desk.png">
+    <section class="hero bg-image" data-image-src="/assets/img/pink-desk.png">
         <div class="hero-inner">
             <div class="container text-center hero-text font-white">
                 <h1>Choose, Check-Out & Download </h1>
@@ -152,21 +152,25 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col2">
-                        <div class="step step-2">
-                            <div class="icon" data-step="2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+                        <div class="how-it-works-wrap">
+                            <div class="step step-1">
+                                <div class="icon" data-step="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+                                </div>
+                                <h3>Add to Cart and Check-out</h3>
+                                <p>We"ve got your covered with a variety of delivery restaurants online.</p>
                             </div>
-                            <h3>Add to Cart and Check-out</h3>
-                            <p>We"ve got your covered with a variety of delivery restaurants online.</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">
-                        <div class="step step-3">
-                            <div class="icon" data-step="3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-4-4M12 8v7"/></svg> 
+                        <div class="how-it-works-wrap">
+                            <div class="step step-1">
+                                <div class="icon" data-step="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-4-4M12 8v7"/></svg> 
+                                </div>
+                                <h3>Download</h3>
+                                <p>Get your food delivered! And enjoy your meal! </p>
                             </div>
-                            <h3>Download</h3>
-                            <p>Get your food delivered! And enjoy your meal! </p>
                         </div>
                     </div>
                 </div>
@@ -180,8 +184,11 @@
     </section>
 
     <section class="f-a-q">
+
         <div class="container">
+
             <h1>Frequently Asked Questions (FAQs)</h1>
+
             <div class="topic">
                 <div class="open">
                 <h2 class="question">1. What is MTC TEMPLATES?</h2>
@@ -208,7 +215,7 @@
                 <h2 class="question">4. Can I get a refund if I'm not satisfied with a template?</h2>
                 <span class="faq-t"></span>
                 </div>
-                <p class="answer">Yes, we offer a 30-day money-back guarantee if you're not satisfied with your purchase. Please refer to our refund policy for more details.</p>
+                <p class="answer">No, we do not offer a money-back guarantee. Please refer to our refund policy for more details.</p>
             </div>
             <div class="topic">
                 <div class="open">
@@ -252,7 +259,9 @@
                 </div>
                 <p class="answer">Yes, you can use our templates for both personal and commercial purposes. However, redistribution or reselling of the templates is not allowed.</p>
             </div>
+
         </div>
+        
     </section>
 
     <footer class="footer">
@@ -260,38 +269,66 @@
         
             <div class="bottom-footer">
                 <div class="row">
-                    <!-- <div class="col-xs-12 col-sm-3 payment-options color-gray"> -->
-                        <!-- <h5>Payment Options</h5> -->
-                        <ul>
-                            <li>
-                                <!-- <a href="#"> <img src="assets/img/paypal.png" alt="Paypal"> </a> -->
-                            </li>
-                            <li>
-                                <!-- <a href="#"> <img src="assets/img/mastercard.png" alt="Mastercard"> </a> -->
-                            </li>
-                            <li>
-                                <!-- <a href="#"> <img src="assets/img/maestro.png" alt="Maestro"> </a> -->
-                            </li>
-                            <li>
-                                <!-- <a href="#"> <img src="assets/img/stripe.png" alt="Stripe"> </a> -->
-                            </li>
-                            <li>
-                                <!-- <a href="#"> <img src="assets/img/bitcoin.png" alt="Bitcoin"> </a> -->
-                            </li>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-top-side">
+                        <h5>Crafting Your Vision, One Template at a Time.</h5>
+                        <p>MTC TEMPLATES offers a wide range of customizable templates for various purposes. Our goal is to provide users with easy-to-use and versatile templates.</p>
+                        <!-- <p>Made with ❤️❤️ in Nigeria</p> -->
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-top-side2">
+                        <h5>Project</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Special Templates</a></li>
+                            <li><a href="#">All Templates</a></li>
                         </ul>
                     </div>
 
-                    <!-- <div class="col-xs-12 col-sm-4 address color-gray">
-                        <h5>Address</h5>
-                        <p>1086 Stockert Hollow Road, Seattle</p>
-                        <h5>Phone: 75696969855</a></h5> 
-                    </div> -->
-                    
-                    <div class="col-xs-12 col-sm-5 additional-info color-gray">
-                        <!-- <h5>Addition informations</h5> -->
-                        <p>&copy; <?php echo date('Y'); ?> MTC Templates. All rights reserved.</p>
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        <h5>Community</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Template Requests</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
                     </div>
+                    
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        <h5>Help</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Refunds</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        <h5>Sitemap</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Templates</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Admin</a></li>
+                        </ul>
+                    </div>
+
                 </div>
+                
+                <div class="footer-bottom">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">License</a></li>
+                        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Refund Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Support</a></li>
+                    </ul>
+                    <p class="text-center">© <?php echo date('Y'); ?> MichTobbaCares Inc.</p>
+                </div>
+
             </div>
         
         </div>

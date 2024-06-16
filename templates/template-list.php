@@ -9,11 +9,28 @@
         exit();
     }
 
+    // include '../header.php';
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="../assets/css/style.css">
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>Templates | MTC Templates</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="css/animsition.min.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<main>
+<body class="home">
     <h1>TEMPLATES</h1>
     <ul>
         <?php foreach ($templates as $template): ?>
@@ -27,7 +44,7 @@
         <?php endforeach; ?>
     </ul>
 
-    <section class="popular">
+    <!-- <section class="popular">
         <div class="container">
             <div class="title text-xs-center m-b-30">
                 <h2>Go Ahead! Select Your Choice!</h2>
@@ -41,7 +58,6 @@
                         <div class="food-item-wrap">
 
                             <div class="figure-wrap bg-image">
-                                <!-- <p><?= $thumbnailUrl; ?></p> -->
                                 <img src="<?= htmlspecialchars($template['thumbnail']) ?>" alt="<?= htmlspecialchars($template['name']) ?>">
                             </div>
 
@@ -64,6 +80,8 @@
                 <button class="btn theme-btn-dash pull-right view-more-btn"><a href="templates/template-list.php">View More</a></button>
             </div>
         </div>
-    </section>
-</main>
+    </section> -->
+</body>
+</html>
+
 <?php include 'footer.php'; ?>
