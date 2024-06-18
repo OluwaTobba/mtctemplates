@@ -8,7 +8,7 @@
         $amount = htmlspecialchars($_POST['amount']);
 
         // DusuPay API
-        $api_url = 'https://www.dusupay.com/api/v1/checkout/initiate';
+        $api_url = 'https://sandbox.dusupay.com/v1';
         $api_key = 'YOUR_API_KEY';
         $api_secret = 'YOUR_API_SECRET';
 
