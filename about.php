@@ -48,10 +48,12 @@
 
     <section class="about-page">
 
-        <section class="about-page-hero">
-            <div class="container">
-                <h1>ABOUT MTC TEMPLATES</h1>
-                <p>Your one-stop destination for premium, customizable templates.</p>
+        <section class="hero about-page-hero">
+            <div class="hero-inner">
+                <div class="container text-center hero-text font-white">
+                    <h1>ABOUT MTC TEMPLATES</h1>
+                    <h4>Your one-stop destination for premium, customizable templates.</h4>
+                </div>
             </div>
         </section>
 
@@ -145,12 +147,12 @@
                 <p>We'd love to hear from you! If you have any questions, suggestions, feedback or just want to say hello, feel free to reach out to us.</p>
                 <p><strong>Email:</strong> <a href="mailto:michtobbacaresinc@gmail.com">michtobbacaresinc@gmail.com</a></p>
                 <p><strong>Phone:</strong> <a href="tel:+2349154680747">+2349154680747</a></p>
-                <p><strong>Address:</strong> [Your Address]</p>
-                <p>Follow us on social media for updates and inspiration: 
-                    <!-- <a href="#"><i class="fab fa-facebook-f"></i></a>  -->
+                <!-- <p><strong>Address:</strong> [Your Address]</p> -->
+                <!-- <p>Follow us on social media for updates and inspiration: 
+                    <a href="#"><i class="fab fa-facebook-f"></i></a> 
                     <a href="https://twitter.com/@mtcinc2023"><i class="fab fa-twitter"></i></a> 
                     <a href="https://www.instagram.com/@mtcinc2023"><i class="fab fa-instagram"></i></a>
-                </p>
+                </p> -->
             </div>
         </section>
 

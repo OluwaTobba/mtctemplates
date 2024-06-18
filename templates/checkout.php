@@ -1,29 +1,31 @@
 <?php
     session_start();
 
-    // echo "Thank You For Your Purchase! Hope To Do More Business With You! <a href='' download=''>Download Template</a>";
-
-    if (!isset($_SESSION['payment_success']) || !$_SESSION['payment_success'] || !isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+    if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
         header('Location: template-list.php');
         exit();
     }
 
-    $purchasedTemplates = $_SESSION['cart'];
+    require '../api/config.php';
 
-    unset($_SESSION['cart']);
-    unset($_SESSION['payment_success']);
+    $cart = $_SESSION['cart'];
+    $total = array_reduce($cart, function($sum, $item) {
+        return $sum + $item ['price'];
+    }, 0);
+
+    $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Download Template | MTC Templates</title>
+    <title>Checkout | MTC Templates</title>
 
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
@@ -32,7 +34,6 @@
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 <body class="home">
-
     <header id="header" class="header-scroll top-header headrom">
         <nav class="navbar navbar-dark">
             <div class="container">
@@ -54,32 +55,48 @@
     <section class="checkout-page">
         
         <div class="container">
-
-            <a href="template-list.php">Templates</a> / <a>Download</a>
-
+        <a href="template-list.php">Templates</a> / <a>Checkout</a>
             <div class="title text-xs-center m-b-30">
-                <h2>Download Your Template(s)</h2>
-                <p>Thank You For Your Purchase! You can download your template(s) below. Hope To Do More Business With You! 😊</p>
+                <h2>Checkout</h2>
+                <p>Review your cart and proceed to payment</p>
             </div>
-
             <div class="row">
-                <?php foreach ($purchasedTemplates as $template): ?>
-
-                    <div class="col-xs-12 col-sm-4 col-md-4 food-item">
-
-                        <div class="food-item-wrap">
-                            <div class="figure-wrap bg-image">
-                                <img src="uploads/<?= htmlspecialchars($template['thumbnail']); ?>" alt="<?= htmlspecialchars($template['name']); ?>">
-                            </div>
-
-                            <div class="content">
-                                <h5><?= htmlspecialchars($template['name']); ?></h5>
-                                <a href="downloads/<?= htmlspecialchars($template['file_path']); ?>" class="btn btn-success theme-btn-dash">Download</a>
-                            </div>
+                <div class="col-md-8">
+                    <div class="cart">
+                        <h4>Your Cart</h4>
+                        <ol>
+                            <?php foreach ($cart as $item): ?>
+                                <li><?php echo htmlspecialchars($item['name']); ?> - $<?php echo htmlspecialchars($item['price']); ?></li>
+                            <?php endforeach; ?>
+                        </ol>
+                        <div class="cart-total">
+                            <h5>TOTAL</h5>
+                            <h3>$<?php echo array_sum(array_column($cart, 'price')); ?></h3>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Payment</h4>
+                    <form action="process_payment.php" method="POST" id="paymentForm">
+                        <!-- Add your payment fields here -->
 
-                <?php endforeach; ?>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Phone Number</label>
+                            <input type="phone" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        
+                        <input type="hidden" name="amount" value="<?php echo $total; ?>">
+                        <button type="submit" class="btn btn-success theme-btn-dash">Proceed to Payment</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -95,4 +112,4 @@
 </body>
 </html>
 
-<?php include 'footer.php' ?>
+<?php include 'footer.php'; ?>

@@ -25,7 +25,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="css/animsition.min.css" rel="stylesheet">
+    <link href="assets/css/animsition.min.css" rel="stylesheet">
     <!-- <link href="style.css" rel="stylesheet"> -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -56,7 +56,7 @@
 
     </header>
 
-    <section class="hero bg-image" data-image-src="/assets/img/pink-desk.png">
+    <section class="hero bg-image" style="background-image: url('assets/img/pink-desk.png');">
         <div class="hero-inner">
             <div class="container text-center hero-text font-white">
                 <h1>Choose, Check-Out & Download </h1>
@@ -175,11 +175,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-sm-12 text-center">
                     <p class="pay-info">Download On Check-Out</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
