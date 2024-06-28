@@ -1,8 +1,7 @@
 <?php
     session_start();
 
-    // echo "Thank You For Your Purchase! Hope To Do More Business With You! <a href='' download=''>Download Template</a>";
-
+    // Check if the payment was successful and the cart is not empty
     if (!isset($_SESSION['payment_success']) || !$_SESSION['payment_success'] || !isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
         header('Location: template-list.php');
         exit();
@@ -10,6 +9,7 @@
 
     $purchasedTemplates = $_SESSION['cart'];
 
+    // Clear the session variables to prevent re-download without payment
     unset($_SESSION['cart']);
     unset($_SESSION['payment_success']);
 ?>
@@ -51,12 +51,9 @@
         </nav>
     </header>
 
-    <section class="checkout-page">
-        
+    <section class="download-page">
         <div class="container">
-
-            <a href="template-list.php">Templates</a> / <a>Download</a>
-
+            <a href="template-list.php">Templates</a> / Check-out / <a>Download</a>
             <div class="title text-xs-center m-b-30">
                 <h2>Download Your Template(s)</h2>
                 <p>Thank You For Your Purchase! You can download your template(s) below. Hope To Do More Business With You! 😊</p>
@@ -64,21 +61,17 @@
 
             <div class="row">
                 <?php foreach ($purchasedTemplates as $template): ?>
-
                     <div class="col-xs-12 col-sm-4 col-md-4 food-item">
-
                         <div class="food-item-wrap">
                             <div class="figure-wrap bg-image">
                                 <img src="uploads/<?= htmlspecialchars($template['thumbnail']); ?>" alt="<?= htmlspecialchars($template['name']); ?>">
                             </div>
-
                             <div class="content">
                                 <h5><?= htmlspecialchars($template['name']); ?></h5>
                                 <a href="downloads/<?= htmlspecialchars($template['file_path']); ?>" class="btn btn-success theme-btn-dash">Download</a>
                             </div>
                         </div>
                     </div>
-
                 <?php endforeach; ?>
             </div>
         </div>
@@ -95,4 +88,4 @@
 </body>
 </html>
 
-<?php include 'footer.php' ?>
+<?php include 'footer.php'; ?>

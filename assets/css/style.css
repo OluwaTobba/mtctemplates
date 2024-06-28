@@ -1407,6 +1407,10 @@ Steps
   color: #000;
 }
 
+.checkout-page .cart {
+  font-size: 20px;
+}
+
 .checkout-page .theme-btn-dash {
   border: 2px dashed #0aae17;
   background-color: transparent;
@@ -1420,14 +1424,73 @@ Steps
 
 
 /* ============================
+* Download Page
+=============================== */
+
+.download-page {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: 90px 0 40px;
+}
+.download-page .title {
+  margin-top: 30px;
+}
+
+
+/* ============================
 * Contact Page
 =============================== */
 
 .contact-page {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  padding: 45px 0 0;
+  padding: 45px 0 25px;
   background-color: #e9ecef;
   color: #000;
+}
+
+.contact-page .theme-btn-dash {
+  border: 2px dashed #202dee;
+  background-color: transparent;
+  color: #202dee;
+}
+.contact-page .theme-btn-dash:hover {
+  background-color: #0714c9;
+  color: #fff;
+  border: 2px solid #0714c9;
+}
+
+@media (max-width: 543px) {
+  .contact-page{
+    padding: 15px 0 35px;
+  }
+
+  .contact-page .location {
+    margin-top: 35px;
+  }
+}
+
+
+/* ============================
+* Feedback Page
+=============================== */
+
+.feedback-page {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: 45px 0 35px;
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.feedback-page .feedback-container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 100vh; */
+}
+
+@media (max-width: 543px) {
+  .feedback-page{
+    padding: 15px 0 35px;
+  }
 }
 
 

@@ -45,7 +45,7 @@
                         <li class="nav-item"><a class="nav-link" href="../about.php">ABOUT</a></li>
                         <li class="nav-item"><a class="nav-link active" href="template-list.php">TEMPLATES <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a class="nav-link" href="../contact.php">CONTACT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../admin/login.php" target="_blank">ADMIN</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="../admin/login.php" target="_blank">ADMIN</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -89,11 +89,15 @@
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="text">Phone Number</label>
-                            <input type="phone" class="form-control" id="phone" name="phone" required>
+                            <label for="phonenumber">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
                         </div>
                         
                         <input type="hidden" name="amount" value="<?php echo $total; ?>">
+                        <input type="hidden" name="currency" value="USD">
+                        <input type="hidden" name="payment_method" value="card"/>
+                        <input type="hidden" name="success_url" value="http://localhost/mtctemplates-github/templates/download.php">
+                        <input type="hidden" name="failure_url" value="http://localhost/mtctemplates-github/templates/download-failed.php">
                         <button type="submit" class="btn btn-success theme-btn-dash">Proceed to Payment</button>
                     </form>
                 </div>
